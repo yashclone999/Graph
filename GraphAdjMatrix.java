@@ -81,7 +81,33 @@ public class GraphAdjMatrix extends Graph{
 	}
 	
 	public List<Integer> two_hop(int v){
-		return null;
+		int num_v = get_vertex();
+		if(num_v == 0){
+			return null;
+		}
+		ArrayList<Integer> two_hop_neigh = new ArrayList<Integer>();
+		
+		for(int i = 0; i<num_v; i++){
+			if(matrix[v][i] != 0){
+				two_hop_neigh.addAll(get_neighbours(i));
+			}
+		}
+		
+		return removeDuplicates(two_hop_neigh);
 	}
-
+	
+	
+	public <T> ArrayList<T> removeDuplicates(ArrayList<T> list){
+		
+		ArrayList<T> newlist = new ArrayList<T>();
+		for(T element : list){
+			if(! newlist.contains(element) ){
+				newlist.add(element);
+			}
+		}
+		
+		
+		return newlist;
+		
+	}
 }
