@@ -29,19 +29,7 @@ public class main {
 //		System.out.println("number of v " + g.get_vertex());
 //		g.print_matrix();
 		
-		GraphAdjList g = new GraphAdjList();
-		
-		System.out.println("number of v " + g.get_vertex());
-		g.add_vertex();
-		g.add_vertex();
-		g.add_vertex();
-		g.add_vertex();
-	
-		g.implement_add_edge(0,1);
-		g.implement_add_edge(1,2);
-		g.implement_add_edge(1, 3);
-		
-		print_list(g.two_hop(0));
+//		
 		
 //		Map<Integer, ArrayList<Integer> > map  = new HashMap<Integer, ArrayList<Integer> >() ;
 //		
@@ -49,6 +37,32 @@ public class main {
 //			ArrayList<Integer> neighbors = new ArrayList<Integer>() ;
 //			map.put(0, neighbors);
 		
+		
+		
+//		CONNECTED COMPONENT
+		
+		GraphAdjList_undirected g = new GraphAdjList_undirected();
+		
+		System.out.println("number of v " + g.get_vertex());
+		g.add_vertex();
+		g.add_vertex();
+		g.add_vertex();
+		g.add_vertex();
+		g.add_vertex();
+		g.add_vertex();
+		g.add_vertex();
+		g.add_vertex();
+	
+		g.implement_add_edge(0,1);
+		g.implement_add_edge(0,2);
+		g.implement_add_edge(3, 4);
+		g.implement_add_edge(3,5);
+		g.implement_add_edge(5,6);
+		g.implement_add_edge(5,7);
+		System.out.println("number of v " + g.get_vertex());
+		g.dfs();
+		g.connected_components();
+
 		
 		
 	}
