@@ -1,2 +1,2 @@
 # Graph
-Implementation of Graph dS in Java
+Implementation of Graph data structures in Java.
